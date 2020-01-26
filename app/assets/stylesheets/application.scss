@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+.width-auto {
+  width: auto;
+}
+
+body {
+  margin: 0 0 3rem;
+}
+
+.navbar {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.entries {
+  .entry {
+    border-top: 1px solid #eee;
+    padding: 1rem;
+  }
+}
