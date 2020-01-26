@@ -1,4 +1,11 @@
 <script>
+import Form from './search_form';
+import List from './list';
+
+export let query;
 </script>
 
-<h1>Index</h1>
+<div>
+  <Form query={query} />
+  <List query={query} />
+</div>
