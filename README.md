@@ -1,24 +1,27 @@
-# README
+# Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 6とSvelteによるフォームのサンプルです。
 
-Things you may want to cover:
+Vue.js版: https://github.com/kazubon/blog-rails6-vuejs/ <br>
+React版: https://github.com/kazubon/blog-rails6-react/ <br>
 
-* Ruby version
+## 動作環境
 
-* System dependencies
+Ruby 2.6.5、Ruby on Rails 6.0, Webpacker 4.2, Svelte 3.18
 
-* Configuration
+非SPA、Turbolinksあり
 
-* Database creation
+## 開発環境の用意
 
-* Database initialization
+```
+$ bundle install
+$ yarn install
+$ bin/rails db:migrate
+$ bin/rails db:seed
+```
 
-* How to run the test suite
+db/seeds/development/users.rb にあるユーザー（`alice@example.com` / `password` など）でログインしてください。
 
-* Services (job queues, cache servers, search engines, etc.)
+## 作っていない機能
 
-* Deployment instructions
-
-* ...
+- ユーザーの新規登録、アカウント管理
