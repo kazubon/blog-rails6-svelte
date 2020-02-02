@@ -11,20 +11,19 @@ let alert = null;
 
 let publishedAtPattern = '\\d{4}(-|\\/)\\d{2}(-|\\/)\\d{2} +\\d{2}:\\d{2}';
 
-function initTags() {
-  let len = entry.tags.length;
-  if(len < 5) {
-    for(let i = 0; i < 5 - len; i++) {
-      entry.tags.push({ name: '' });
-    }
+function fillTags(srcTags) {
+  let tags = [];
+  for(let i = 0; i < 5; i++) {
+    tags[i] = srcTags[i] || { name: '' };
   }
+  return tags;
 }
 
 function getEntry() {
   let path = entryId ? `/entries/${entryId}/edit` : '/entries/new';
   Axios.get(path + '.json').then((res) => {
     entry = res.data.entry;
-    initTags();
+    entry.tags = fillTags(entry.tags);
   });
 }
 
