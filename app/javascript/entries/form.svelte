@@ -1,11 +1,12 @@
 <script>
 import Axios from 'axios';
 import Flash from '../flash';
+import { onMount } from 'svelte';
 
 export let entryId;
 
 let entry = {
-  title: '', body: '', tags: [], published_at: '', draft: false
+  title: null, body: null, tags: [], published_at: null, draft: false
 };
 let alert = null;
 
